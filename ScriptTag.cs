@@ -21,12 +21,13 @@ namespace Connect.Gtm
                 <script>
                     (function(w) {
                     w.gtmData = w.gtmData || {};
-                    // IP to detect internal access, will not be stored";
+                    // IP to detect internal access, will not be stored
+                    ";
 
             if (ip)
-                script += $"w.gtmData.ipAddress = '{ipValue}';";
+                script += $"w.gtmData.ipAddress = '{ipValue}';\r\n";
             if (isEditor)
-                script += $"w.gtmData.isEditor = {isEditorValue.ToString().ToLower()};";
+                script += $"w.gtmData.isEditor = {isEditorValue.ToString().ToLower()};\r\n";
 
             script += @"})(window);
                 </script>";
